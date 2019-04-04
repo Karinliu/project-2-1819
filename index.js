@@ -110,5 +110,5 @@ function detail(req, res) {
     );
 }
 
-app.listen(5000, () => console.log(`Example app listening on port ${port}!`))
-    // app.listen(process.env.PORT || 5000)
+// app.listen(5000, () => console.log(`Example app listening on port ${port}!`))
+    app.listen(process.env.PORT || 5000)

@@ -4,7 +4,10 @@
   "description": "## Zoek in de de collectie van de OBA",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon index.js",
+    "build:css": "node gulp/css.js",
+    "build:js": "node gulp/javascript.js"
   },
   "repository": {
     "type": "git",
