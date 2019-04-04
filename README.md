@@ -1,33 +1,61 @@
-# Project 1 @cmda-minor-web · 2018-2019
+# Project 2 @cmda-minor-web · 2018-2019
 
-## Zoek in de de collectie van de OBA
+## CMD Amsterdam
+<img width="1280" alt="Screenshot 2019-04-04 21 08 46" src="https://user-images.githubusercontent.com/32538678/55581802-19808800-571e-11e9-9a24-c6a2ce120069.png">
 
-Het project vindt plaats bij de Centrale OBA. Maandagochtend is om 10.00 uur de kickoff, vrijdag zijn de presentaties van de resultaten. In een week bouwt iedere student een eigen prototype dat bezoekers kan helpen om items uit de OBA collectie te vinden. Technieken geleerd bij [CSS to the Rescue](https://github.com/cmda-minor-web/css-to-the-rescue-1819) en [Web App from Scratch](https://github.com/cmda-minor-web/web-app-from-scratch-1819) worden toegepast bij het bouwen van de de prototypes.
+## De opdracht
+De CMD heeft een aantal jaren geleden een website opgericht die is gebouwd met Wordpress. De reden hiervoor is zodat de beheerder eenvoudiger content kan toevoegen zonder enige technische kennis te hebben.
 
-## Programma
-We verzamelen maandagochtend om 09.45 op de 1e verdieping van de Centrale OBA, [Oosterdokskade 143](https://www.google.com/maps/place/OBA+library+of+Amsterdam/@52.3756983,4.9082087,15z/data=!4m2!3m1!1s0x0:0x6b97f693e6ecb494?ved=2ahUKEwioo6OrzubgAhWLNOwKHR6KDQgQ_BIwCnoECAYQCA).
+#### Het probleem
+Wordpress is een eenvoudige manier om een website te onderhouden. Enige nadelen die hier aan verbonden zijn:
 
-## Werkwijze en Criteria
-### Werkwijze
-Full-time week werken aan (technisch) bewijzen van een concept-idee. Vrijdag is de pitch! Student laat zien dat hij/zij de vakken [CSS to the Rescue](https://github.com/cmda-minor-web/css-to-the-rescue-1819) en [Web App from Scratch](https://github.com/cmda-minor-web/web-app-from-scratch-1819) begrijpt en beheerst.
+#### Performance
+• Het laden van de pagina duurt 4,5 seconden op een snelle verbinding.
+• Te veel script worden ingeladen door het aantal plugins wat is geïnstalleerd.
+• Er worden te grote afbeeldingen gebruikt die opgeslagen moeten worden.
+• Alle afbeeldingen worden tegelijk ingeladen in de website.
+• Het CSS bestand is erg groot en een groot gedeelte daarvan wordt niet gebruikt.
+• Javascript en CSS zijn niet gecompressed. 
+• Er is geen gebruik gemaakt van caching die data kan opvangen zonder opnieuw de data hoeven op te halen.
 
-Iedere dag zijn er coaches aanwezig voor coaching en feedback. We sluiten de dag af met een stand up, om de status door te spreken. Waar ben je mee bezig? Loop je ergens vast of heb je hulp nodig? Waar sta je?
+#### Accessibility
+• De links hebben niet altijd een goed contrast om te lezen.
+• Viewport meta tag wordt niet goed gebruikt.
 
-### Beoordeling
-Tijdens de beoordeling krijg je feedback op het resultaat en op je functioneren. De vakdocenten kijken naar je code en beoordelen In hoeverre je in het project laten zien dat je de bijhorende vakken beheerst en goed hebt toegepast. Lifely is geïnteresseerd in hoeverre je oplossing voldoet aan de eisen die zijzelf stellen aan hun producten. Misschien laat je wel wat zien waar ze zelf nog niet aan gedacht hebben?
 
-Het project telt als AVV mee met de Meesterproef.
+Zie hieronder de Audits die is gerund voor de Wordpress pagina.
 
-### Feedback over functioneren
-Je hebt een leergierig, gedreven en zelfredzame houding nodig om de minor te kunnen halen. Welke vaardigheden heb je laten zien? Onderzoekend vermogen? Creativiteit? Conceptueel? In hoeverre komen je houding en verworven vaardigheden overeen met wat een frontender in de praktijk nodig heeft?
+<img width="1280" alt="Screenshot 2019-04-04 21 16 16" src="https://user-images.githubusercontent.com/32538678/55582104-ebe80e80-571e-11e9-8fbb-2468ce116cdb.png">
 
-### Feedback over Web App from Scratch
-In het vak [Web App from Scratch](https://github.com/cmda-minor-web/web-app-from-scratch-1819) heb je geleerd een web app te maken zonder frameworks of onnodige libraries, dus zoveel mogelijk met native HTML, CSS & JavaScript. Het eindproduct is een modulair opgezet prototype voor een single page web app. Data wordt opgehaald uit een externe API, waar nodig gemanipuleerd en vervolgens getoond in de Web App. Je leert hoe structuur aan te brengen in je code en hoe je hiermee 'from scratch' een web app kan maken.
+## Start van het project
+Als eerste ben ik begonnen met het op halen van de data uit de website met behulp van de Wordpress API. Aangezien de data diep is genest in de code, is er geprobeerd om `Regex` te gebruiken. Dit ging niet zo soepel als gehoopt. Vervolgens is er geprobeerd om diverse packages te installeren en te gebruiken. Uiteindleijk kwam ik op de volgende package uit: [Sanitize-HTML](https://www.npmjs.com/package/Sanitize-html). Deze package zorgt er voor dat er heel eenvoudig HTML-elementen opgeschoond kunnen worden. 
 
-### Feedback over CSS to the Rescue
-In het vak [CSS to the Rescue](https://github.com/cmda-minor-web/css-to-the-rescue-1819) heb je geleerd over de (brede) scope van CSS, over Progressive Enhancement, de _cascase_, _inheritance_ en _specifity_. Het is belangrijk om deze basisprincipes van CSS goed te begrijpen. Niet alleen op praktisch niveau, ook op experimenteel niveau. Zonder goed begrip van de basisprincipes is CSS magisch en weird. Met een goed begrip heb je CSS onder controle en kan je het laten doen wat jij wil. En dat is nodig om webpagina’s vorm te geven met attention to detail; webpagina’s waar mensen blij van worden.
+#### Nadeel gebruik packages
+Ook al is de Sanitize-html erg handig om elementen uit te filteren, blijf je toch nog het probleem hebben dat classes van het element er in blijven. Ook liep ik tegen het probleem op dat bepaalde elementen niet de juiste tags hebben, bijvoorbeeld dat headers een span bleken te zijn.
 
-### Oplevering & criteria
-- Presentatie met je bevindingen bij de OBA. 
-- Github met je code en readme.
 
+## Verdere aanpak
+Om het probleem toch nog aan te pakken, heb ik besloten om vanuit "Scratch" alles te bouwen. Uiteindelijk heb ik besloten om de `samenwerking` pagina uit te werken en vanaf nul te begonnen met het schrijven van HTML en CSS. 
+
+## Resultaat
+Bij het bouwen van het prototype heb ik de volgende punten toegepast in het ontwerp:
+
+#### Performance
+• Afbeeldingen verkleind en gecompressed.
+• Afbeeldingen laten lazy loaden.
+• CSS en Javascript verkleinen.
+• Ongebruikte CSS er uit filteren.
+• Service-worker toegevoegd aan de website waardoor afbeeldingen, bestanden en pagina's worden opgevangen.
+• Ook kan de pagina offline bekeken worden (indien deze eerder is bezocht door de gebruiker).
+
+#### Accessibility
+• Geprobeerd om buttons en de belangrijkste content meer naar voren te laten springen.
+• De juiste meta tags toevoegen.
+• Het kleurcontrast beter toe te passen.
+
+<img width="1280" alt="Screenshot 2019-04-04 21 46 09" src="https://user-images.githubusercontent.com/32538678/55583821-1b007f00-5723-11e9-9380-52f9a65c26cb.png">
+
+## Aanbeveling
+Als aanbevling voor de CMD Amsterdam, is om de voorkant van de website te laten bouwen door een front-ender. En om Wordpress te gebruiken als achterkant van de website, namelijk het inladen van de gewenste content en data. 
+
+De reden hiervoor is omdat de plugins die er voor zorgen dat de content en data wordt ingeladen in de website, juist er voor zorgen dat de performance zo laag blijven.

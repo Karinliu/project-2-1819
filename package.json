@@ -1,0 +1,39 @@
+{
+  "name": "project-2-1819",
+  "version": "1.0.0",
+  "description": "## Zoek in de de collectie van de OBA",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon index.js",
+    "build:css": "node gulp/css.js",
+    "build:js": "node gulp/javascript.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Karinliu/project-2-1819.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Karinliu/project-2-1819/issues"
+  },
+  "homepage": "https://github.com/Karinliu/project-2-1819#readme",
+  "dependencies": {
+    "all": "0.0.0",
+    "body-parser": "^1.18.3",
+    "dom-parser": "^0.1.5",
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "node-fetch": "^2.3.0",
+    "nodemon": "^1.18.10",
+    "sanitize-html": "^1.20.0"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-cssnano": "^2.1.3",
+    "gulp-purgecss": "^1.1.1",
+    "gulp-uglify": "^3.0.2"
+  }
+}
