@@ -3,6 +3,8 @@
 ## CMD Amsterdam
 <img width="1280" alt="Screenshot 2019-04-04 21 08 46" src="https://user-images.githubusercontent.com/32538678/55581802-19808800-571e-11e9-9a24-c6a2ce120069.png">
 
+Zie hier de liver server: [Karin's CMDA prototype](https://karin-cmda.herokuapp.com/)
+
 ## De opdracht
 De CMD heeft een aantal jaren geleden een website opgericht die is gebouwd met Wordpress. De reden hiervoor is zodat de beheerder eenvoudiger content kan toevoegen zonder enige technische kennis te hebben.
 
