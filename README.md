@@ -52,6 +52,8 @@ Bij het bouwen van het prototype heb ik de volgende punten toegepast in het ontw
 • Geprobeerd om buttons en de belangrijkste content meer naar voren te laten springen.
 • De juiste meta tags toevoegen.
 • Het kleurcontrast beter toe te passen.
+• Focus states zijn toegevoegd.
+• Afbeeldingen hebben nu ook een alt tag voor screenreaders.
 
 <img width="1280" alt="Screenshot 2019-04-04 21 46 09" src="https://user-images.githubusercontent.com/32538678/55583821-1b007f00-5723-11e9-9380-52f9a65c26cb.png">
 
